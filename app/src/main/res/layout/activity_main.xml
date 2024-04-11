@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/upcoming"
+                android:layout_width="313dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:text="UPCOMING GAMES 2023/2024 "
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalUpcomingGames"
+                android:layout_width="wrap_content"
+                android:layout_height="218dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/upcoming"
+                app:layout_constraintVertical_bias="0.0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/game1"
+                        android:layout_width="296dp"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="4dp"
+                        android:onClick="handleSelection"
+                        android:src="@drawable/gta"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/game2"
+                        android:layout_width="170dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/stalker2"
+                        android:onClick="handleSelection"
+                        app:layout_constraintStart_toEndOf="@+id/game1"
+                        app:layout_constraintTop_toTopOf="@id/game1" />
+
+                    <ImageButton
+                        android:id="@+id/game3"
+                        android:layout_width="170dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/batman"
+                        android:onClick="handleSelection"
+                        app:layout_constraintStart_toEndOf="@+id/game2"
+                        app:layout_constraintTop_toTopOf="@id/game2" />
+
+                    <ImageButton
+                        android:id="@+id/game4"
+                        android:layout_width="170dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/stay"
+                        android:onClick="handleSelection"
+                        app:layout_constraintStart_toEndOf="@+id/game3"
+                        app:layout_constraintTop_toTopOf="@id/game3" />
+
+                    <ImageButton
+                        android:id="@+id/game5"
+                        android:layout_width="170dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/avatar"
+                        android:onClick="handleSelection"
+                        app:layout_constraintStart_toEndOf="@+id/game4"
+                        app:layout_constraintTop_toTopOf="@id/game4" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/topgames"
+                android:layout_width="168dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="24dp"
+                android:text="TOP GAMES "
+                android:textColor="@color/white"
+                android:textSize="20dp"
+
+                app:layout_constraintStart_toStartOf="@+id/upcoming"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalUpcomingGames" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalTopGames"
+                android:layout_width="wrap_content"
+                android:layout_height="218dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topgames"
+                app:layout_constraintVertical_bias="0.0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/game6"
+                        android:layout_width="140dp"
+                        android:layout_height="210dp"
+                        android:layout_marginTop="16dp"
+                        android:onClick="handleSelection"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/warzone"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/game7"
+                        android:layout_width="170dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/bf1"
+                        android:onClick="handleSelection"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintStart_toEndOf="@+id/game6"
+                        app:layout_constraintTop_toTopOf="@id/game6" />
+
+                    <ImageButton
+                        android:id="@+id/game8"
+                        android:layout_width="165dp"
+                        android:layout_height="190dp"
+                        android:layout_marginStart="15dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/c77"
+                        android:onClick="handleSelection"
+                        app:layout_constraintStart_toEndOf="@+id/game7"
+                        app:layout_constraintTop_toTopOf="@id/game7" />
+
+                    <ImageButton
+                        android:id="@+id/game9"
+                        android:layout_width="170dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/bf2042"
+                        android:onClick="handleSelection"
+                        app:layout_constraintStart_toEndOf="@+id/game8"
+                        app:layout_constraintTop_toTopOf="@id/game8" />
+
+                    <ImageButton
+                        android:id="@+id/game10"
+                        android:layout_width="170dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/csgo"
+                        android:onClick="handleSelection"
+                        app:layout_constraintStart_toEndOf="@+id/game9"
+                        app:layout_constraintTop_toTopOf="@id/game9" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/mostpopulagames"
+                android:layout_width="313dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:text="MOST POPULAR GAMES "
+
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalTopGames" />
+
+            <HorizontalScrollView
+                android:id="@+id/horzpopular"
+                android:layout_width="wrap_content"
+                android:layout_height="218dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mostpopulagames"
+                app:layout_constraintVertical_bias="0.0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/game11"
+                        android:layout_width="296dp"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="4dp"
+                        android:onClick="handleSelection"
+                        android:src="@drawable/gtav"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/game12"
+                        android:layout_width="170dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/lol"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintStart_toEndOf="@+id/game11"
+                        app:layout_constraintTop_toTopOf="@id/game11"
+                        android:onClick="handleSelection"/>
+
+                    <ImageButton
+                        android:id="@+id/game13"
+                        android:layout_width="170dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/fornite"
+                        app:layout_constraintStart_toEndOf="@+id/game12"
+                        app:layout_constraintTop_toTopOf="@id/game12"
+                        android:onClick="handleSelection"/>
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/offers"
+                android:layout_width="146dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="236dp"
+                android:layout_marginTop="304dp"
+                android:text="Check Game News!"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:onClick="checkOffers"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <TextView
+                android:id="@+id/welcome"
+                android:layout_width="255dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="16dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

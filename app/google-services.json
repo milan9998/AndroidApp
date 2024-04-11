@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "314047231067",
+    "project_id": "ecommerceapp-4928b",
+    "storage_bucket": "ecommerceapp-4928b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314047231067:android:ace6b58eedbc00ceeefb7e",
+        "android_client_info": {
+          "package_name": "rs.ac.ecommerceapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBE3jqZzsYADXTa4jKry7hWyqdNkWLm3as"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
